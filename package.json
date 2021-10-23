@@ -1,10 +1,9 @@
 {
   "name": "arranworks-profile",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "engines": {
-    "node" : "14.x"
+    "node": "14.x"
   },
   "dependencies": {
     "ejs": "^3.1.6",
@@ -17,9 +16,18 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arraniri46/arranworks-profile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arraniri46/arranworks-profile/issues"
+  },
+  "homepage": "https://github.com/arraniri46/arranworks-profile#readme",
+  "description": ""
 }
