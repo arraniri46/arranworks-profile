@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-pemula",
+  "name": "arranworks-profile",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node app.js"
+    "build": "node app.js"
   },
   "keywords": [],
   "author": "",
