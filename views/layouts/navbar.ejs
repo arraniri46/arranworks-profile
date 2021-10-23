@@ -1,0 +1,69 @@
+<nav class="navbar px-5" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="img/logo.png" width="24" height="28">
+        <img src="img/arranworks-type.png" width="150" height="28">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+
+      </div>  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-link" id="show-modal">
+              <strong>Owner? Click Here</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-white p-5">
+        <h3 class="title mb-5">LOGIN</h3>
+        <form action="">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Name">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="has-text-centered mt-6">
+            <a class="button is-link" href="/settings">Sign In</a>
+          </div>      
+          
+        </form>
+      </div>
+    </div>
+  </nav>
+ 
+  <script>
+
+    const showModal = document.querySelector('#show-modal');
+    const modal = document.querySelector('.modal');
+    const modalBg = document.querySelector('.modal-background');
+
+    showModal.addEventListener('click', () => {
+      modal.classList.add('is-active');
+    });
+
+    modalBg.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+    });
+  </script>

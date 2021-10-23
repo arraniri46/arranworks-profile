@@ -1,0 +1,106 @@
+<div class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Owner Panel
+    </p>
+  </div>
+</div>
+<div class="container">
+    <div class="is-flex">
+        <div class="container box">
+            <div class="tabs is-boxed" id="tab-menu">
+                <ul>
+                  <li class="is-active" data-target="portofolio"><a>Portofolio</a></li>
+                  <li class="" data-target="projects"><a>Projects</a></li>
+                  <li class="" data-target="certificates"><a>Certificates</a></li>
+                </ul>
+            </div>
+            <div class="container is-mobile" id="tab-content">
+                <div class="columns" id="portofolio">
+                    <div class="column mb-6 is-one-third">
+                        <h3 class="is-size-4">Portofolio Settings</h3>
+                        <div class="px-2 m-3">                          
+                            <div class="field">
+                                <label class="label">Title</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Subtitle</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Input images</label>
+                                <div id="input-gambar" class="file has-name">
+                                    <label class="file-label">
+                                      <input class="file-input" type="file" name="resume">
+                                      <span class="file-cta">
+                                        <span class="file-icon">
+                                          <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">
+                                          Choose a file…
+                                        </span>
+                                      </span>
+                                      <span class="file-name">
+                                        No file uploaded
+                                      </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <textarea class="textarea mt-5" placeholder="e.g. Hello world"></textarea>
+                            <div class="field mt-6">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" style="max-height: 550px; overflow-y:scroll;">
+                        <div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-start">
+                            <% certificates.forEach(certificate => { %>
+                                <div class="card m-2" style="width: 180px;">
+                                  <div class="card-image">
+                                    <figure class="image is-4by3">
+                                      <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+                                    </figure>
+                                  </div>
+                                  <div class="card-content" style="overflow: hidden;">
+                                    <h4 class="title is-size-6 is-spaced"><%= certificate.title %> </h4>
+                                    <h6 class="subtitle is-6"><%= certificate.subtitle %></h6>
+                                  </div>
+                                  <footer class="card-footer ">
+                                    <div class="buttons">
+                                      <button class="button is-primary is-small">Edit</button>
+                                      <button class="button is-link is-small">Delete</button>
+                                    </div>
+                                  </footer>
+                                </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns" id="projects">
+                  <h3>Projects</h3>
+                </div>
+                <div class="columns" id="certificates">
+                  <h3>Certificates</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const imageInput = document.querySelector('#input-gambar input[type=file]');
+
+    imageInput.onchange = () => {
+        if (imageInput.files.length > 0) {
+        const fileName = document.querySelector('#input-gambar .file-name');
+        fileName.textContent = imageInput.files[0].name;
+        }
+    }
+</script>

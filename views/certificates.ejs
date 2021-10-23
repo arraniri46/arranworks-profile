@@ -1,0 +1,26 @@
+<div class="container" >
+   <div class="is-flex is-flex-direction-row is-flex-wrap-wrap">
+    <% certificates.forEach(certificate => { %>
+        <div class="card mx-2" style="max-width: 200px;">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <h5 class="is-size-5"><%= certificate.title %> </h5>
+        
+            <div class="content">
+              <h6 class="is-size-6"><%= certificate.subtitle %> </h6>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <div class="buttons">
+              <button class="button is-primary">Edit</button>
+              <button class="button is-link">Delete</button>
+            </div>
+          </footer>
+        </div>
+       <% }) %>
+   </div>
+</div>

@@ -1,0 +1,31 @@
+@media screen and (max-width: 576px) {
+    /* body {
+      background-color: lightgray;
+    } */
+    
+    div #certificates {
+        /* overflow-y: visible !important; */
+        max-height: 700px  !important;
+
+    }
+
+    div .card {
+        min-width: 320px !important;
+    }
+
+    div #my-journey {
+      margin-top: 100px;
+    }
+  }
+
+@media screen and (min-width: 1400px) {
+
+  div #maintab {
+    min-height: 540px !important;
+  }
+}
+
+#certificates::-webkit-scrollbar, #skills::-webkit-scrollbar {
+    display: none;
+}
+  
