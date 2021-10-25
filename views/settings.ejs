@@ -19,7 +19,8 @@
                 <div class="columns" id="portofolio">
                     <div class="column mb-6 is-one-third">
                         <h3 class="is-size-4">Portofolio Settings</h3>
-                        <div class="px-2 m-3">                          
+                        <form action="/settings" method="POST">
+                          <div class="px-2 m-3">                          
                             <div class="field">
                                 <label class="label">Title</label>
                                 <div class="control">
@@ -32,7 +33,7 @@
                                     <input class="input" type="text" placeholder="Text input">
                                 </div>
                             </div>
-                            <div class="field">
+                            <!-- <div class="field">
                                 <label class="label">Input images</label>
                                 <div id="input-gambar" class="file has-name">
                                     <label class="file-label">
@@ -51,11 +52,12 @@
                                     </label>
                                 </div>
                             </div>
-                            <textarea class="textarea mt-5" placeholder="e.g. Hello world"></textarea>
+                            <textarea class="textarea mt-5" placeholder="e.g. Hello world"></textarea> -->
                             <div class="field mt-6">
                                 <button class="button is-link">Submit</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                     <div class="column" style="max-height: 550px; overflow-y:scroll;">
                         <div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-start">

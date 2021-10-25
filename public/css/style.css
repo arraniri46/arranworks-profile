@@ -6,6 +6,10 @@ strong {
     font-family: sans-serif;
 }
 
-/* div . {
-    background-color: #EEF3FC;
-} */
+.title {
+    font-family: 'M Plus Rounded 1c', sans-serif;
+}
+
+#about-desc{
+    text-align: justify;
+}
