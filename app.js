@@ -55,21 +55,18 @@ app.get('/settings', async(req, res) => {
   res.render('settings', context);
 });
 
-app.post('/settings', async(req, res) => {
+// app.post('/settings', async(req, res) => {
 
-  const certificates = await Certificate.find();
+//   const certificates = await Certificate.find();
 
-  // Certificate.insertMany(req.body);
-  console.log(req.body)
+//   context = {
+//     layout : 'layouts/main-layout',
+//     title : 'Settings',
+//     certificates,
+//   }
 
-  context = {
-    layout : 'layouts/main-layout',
-    title : 'Settings',
-    certificates,
-  }
-
-  res.render('settings', context);
-});
+//   res.render('settings', context);
+// });
 
 app.get('/certificates',async(req, res) => {
 

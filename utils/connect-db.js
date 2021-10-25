@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const MONGODB_URI = 'mongodb+srv://admin:stranded2@cluster0.sjby8.mongodb.net/portofolio?retryWrites=true&w=majority';
 
-mongoose.connect('MONGODB_URI', (err) => {
+mongoose.connect(MONGODB_URI, (err) => {
     if (err){
         throw err;
     } else{
